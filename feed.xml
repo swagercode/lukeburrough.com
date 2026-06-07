@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>Luke Burrough</title>
+    <link>https://lukeburrough.com/</link>
+    <description>Notes and essays by Luke Burrough.</description>
+    <language>en-us</language>
+    <item>
+      <title>Hello, world</title>
+      <link>https://lukeburrough.com/posts/hello-world.html</link>
+      <guid>https://lukeburrough.com/posts/hello-world.html</guid>
+      <pubDate>Sat, 06 Jun 2026 12:00:00 -0700</pubDate>
+      <description>A first post to prove the site is live and ready for more writing.</description>
+    </item>
+  </channel>
+</rss>
