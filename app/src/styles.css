@@ -1,18 +1,20 @@
 :root {
-  color: #f7f3ff;
-  background: #050408;
+  color: #e8e0d2;
+  background: #07060a;
   font-family: "MS PGothic", "MS Gothic", "Courier New", monospace;
   font-synthesis: none;
   text-rendering: geometricPrecision;
-  --ink: #f7f3ff;
-  --void: #050408;
-  --panel: #130b18;
-  --panel-2: #1b111e;
-  --acid: #b6ff28;
-  --blood: #ff2457;
-  --cyan: #00e7ff;
-  --gold: #ffd23f;
-  --violet: #b85cff;
+  --ink: #e8e0d2;
+  --void: #07060a;
+  --panel: #121018;
+  --panel-2: #1c1825;
+  --acid: #b7b36b;
+  --blood: #8f2f55;
+  --cyan: #76c5bd;
+  --gold: #c5a66a;
+  --violet: #9a7ac2;
+  --bone: #e8e0d2;
+  --steel: #2a2632;
 }
 
 * {
@@ -32,8 +34,9 @@ body {
   overflow-x: hidden;
   color: var(--ink);
   background:
-    radial-gradient(circle at 20% 20%, rgba(255, 36, 87, 0.24), transparent 24rem),
-    linear-gradient(135deg, #050408 0%, #110713 48%, #000 100%);
+    radial-gradient(circle at 18% 18%, rgba(118, 197, 189, 0.14), transparent 22rem),
+    radial-gradient(circle at 76% 10%, rgba(143, 47, 85, 0.12), transparent 20rem),
+    linear-gradient(135deg, #07060a 0%, #17121e 52%, #020203 100%);
 }
 
 button,
@@ -83,7 +86,7 @@ button {
   height: 135px;
   image-rendering: pixelated;
   border: 2px solid var(--gold);
-  box-shadow: 0 0 18px rgba(255, 210, 63, 0.5);
+  box-shadow: 0 0 18px rgba(118, 197, 189, 0.34);
   animation: dvd-x 11s linear infinite alternate;
 }
 
@@ -102,29 +105,30 @@ button {
 
 .masthead {
   border: 3px ridge var(--violet);
-  background: rgba(12, 7, 15, 0.9);
-  box-shadow: 8px 8px 0 #000, 0 0 32px rgba(184, 92, 255, 0.22);
+  background: rgba(13, 11, 18, 0.92);
+  box-shadow: 8px 8px 0 #000, 0 0 32px rgba(118, 197, 189, 0.16);
 }
 
 .status-strip {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 6px 10px;
-  color: #000;
-  background: var(--acid);
+  color: #050407;
+  background: var(--gold);
+  border-bottom: 1px solid var(--cyan);
   font-size: 12px;
   text-transform: uppercase;
 }
 
 .masthead h1 {
   margin: 18px 12px 10px;
-  color: var(--blood);
+  color: var(--bone);
   font-size: clamp(42px, 9vw, 96px);
   line-height: 0.9;
   text-align: center;
-  text-shadow: 4px 4px 0 #000, -2px -2px 0 var(--cyan), 0 0 24px rgba(255, 36, 87, 0.8);
+  text-shadow: 4px 4px 0 #000, -2px -2px 0 var(--violet), 2px 2px 0 var(--cyan), 0 0 24px rgba(118, 197, 189, 0.4);
 }
 
 .home-grid {
@@ -138,10 +142,10 @@ button {
 .pixel-box {
   border-width: 4px;
   border-style: ridge groove groove ridge;
-  border-color: var(--cyan) var(--blood) var(--blood) var(--cyan);
+  border-color: var(--cyan) var(--steel) var(--steel) var(--violet);
   background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 50%, transparent 50%) 0 0 / 6px 6px,
-    rgba(19, 11, 24, 0.94);
+    linear-gradient(90deg, rgba(230, 220, 199, 0.035) 50%, transparent 50%) 0 0 / 6px 6px,
+    rgba(18, 16, 24, 0.94);
   box-shadow: 6px 6px 0 #000;
 }
 
@@ -149,8 +153,9 @@ button {
 .box-heading-row {
   margin: 0;
   padding: 8px 10px;
-  color: #000;
-  background: linear-gradient(90deg, var(--blood), var(--gold), var(--cyan));
+  color: #050407;
+  background: var(--cyan);
+  border-bottom: 2px solid var(--violet);
   text-transform: lowercase;
 }
 
@@ -171,7 +176,7 @@ button {
 }
 
 .box-heading-row span {
-  color: #0b0710;
+  color: var(--bone);
   font-size: 12px;
 }
 
@@ -188,11 +193,11 @@ button {
   justify-content: center;
   min-height: 38px;
   padding: 7px 12px;
-  color: var(--acid);
+  color: var(--bone);
   text-decoration: none;
   text-transform: uppercase;
   border: 3px outset var(--violet);
-  background: #070509;
+  background: #080808;
   box-shadow: inset 0 0 0 1px #fff3;
   cursor: pointer;
 }
@@ -200,8 +205,8 @@ button {
 .button-stack a:hover,
 .back-link:hover,
 .song-link:hover {
-  color: #000;
-  background: var(--acid);
+  color: var(--bone);
+  background: #241b33;
 }
 
 .songs-box {
@@ -211,7 +216,7 @@ button {
 .terminal-line {
   margin: 0;
   padding: 16px;
-  color: var(--acid);
+  color: var(--cyan);
 }
 
 .terminal-line.error {
@@ -231,20 +236,21 @@ button {
   gap: 4px;
   padding: 10px;
   text-align: left;
-  border: 2px solid var(--cyan);
+  border: 2px solid var(--steel);
   background: rgba(0, 0, 0, 0.74);
   cursor: pointer;
 }
 
 .song-title {
-  color: var(--gold);
+  color: var(--bone);
   font-size: 20px;
   text-decoration: underline;
   text-decoration-style: dotted;
+  text-decoration-color: var(--cyan);
 }
 
 .song-meta {
-  color: #cfc7d6;
+  color: #b8adc4;
   font-size: 12px;
 }
 
@@ -253,7 +259,7 @@ button {
   gap: 12px;
   margin: 0;
   padding: 18px 26px 22px;
-  color: var(--gold);
+  color: var(--bone);
 }
 
 .footer-bar {
@@ -262,7 +268,7 @@ button {
   bottom: 10px;
   z-index: 4;
   padding: 5px 8px;
-  border: 2px solid var(--acid);
+  border: 2px solid var(--gold);
   background: #000;
 }
 
@@ -287,10 +293,10 @@ button {
 
 .song-header h1 {
   margin: 0;
-  color: var(--gold);
+  color: var(--bone);
   font-size: clamp(30px, 6vw, 72px);
   line-height: 1;
-  text-shadow: 3px 3px 0 #000, 0 0 18px rgba(255, 210, 63, 0.55);
+  text-shadow: 3px 3px 0 #000, 0 0 18px rgba(216, 180, 95, 0.38);
 }
 
 .song-header p {
@@ -306,7 +312,7 @@ button {
   z-index: 3;
   width: min(320px, 34vw);
   aspect-ratio: 16 / 9;
-  border: 3px ridge var(--blood);
+  border: 3px ridge var(--violet);
   background: #000;
   box-shadow: 6px 6px 0 #000;
 }
@@ -333,7 +339,7 @@ button {
   display: grid;
   gap: 8px;
   padding-bottom: 18px;
-  border-bottom: 1px dashed rgba(0, 231, 255, 0.5);
+  border-bottom: 1px dashed rgba(107, 199, 215, 0.42);
 }
 
 .stanza:last-child {
@@ -357,7 +363,7 @@ button {
 }
 
 .lyric-row span[lang="ja"] {
-  border-left-color: var(--gold);
+  border-left-color: var(--cyan);
 }
 
 .missing-song {

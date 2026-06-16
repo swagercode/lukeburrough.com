@@ -87,7 +87,6 @@
     <header class="masthead">
       <div class="status-strip">
         <span>LAST UPDATED: 2026-06-15</span>
-        <span>BEST VIEWED IN 800x600</span>
       </div>
       <h1>LUKE BURROUGH</h1>
     </header>
